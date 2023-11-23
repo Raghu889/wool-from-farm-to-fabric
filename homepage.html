@@ -48,24 +48,33 @@
         align-items: center;
         justify-content: center;
     }
-    .button{
-        background-color: green; /* Replace with your desired color code */
-        border: 0cap;
-        margin-top: 20px;
-        height: 30px;
-        width: 60px;
-      
+    .loginbutton{
+        text-decoration: black;
         
     }
+    .menuButton{
+        background-color: green;
+        height: 70px;
+        border: 0cap;
+        cursor: pointer;
+    }
+ 
 </style>
 <body>
     <div class="header" id="header">
-    <div id="menu" class="menu"><img src="images-removebg-preview.png" alt="menu"></div>
+    <div id="menu" class="menu"><button class="menuButton" onclick="openmenu()"><img src="images-removebg-preview.png" alt="menu" width="70px"></button></div>
     <div class="name">
     <div id="logo" class="logo"><img src="OIP__1_-removebg-preview (2).png" alt="logo" height="70px"></div>
     <div id="logo-text" class="logo-text"><h1><p>WOOL FROM FARM TO FABRIC</p></h1></div>
     </div>
-    <div id="login" class="login"><button class="button">login</button></div>
+    <div id="login" class="login"><a href="login.html" ><h2 class="loginbutton">Login</h2></a></div>
 </div>
+
+
 </body>
+<script>
+    function openmenu(){
+
+    }
+</script>
 </html>
