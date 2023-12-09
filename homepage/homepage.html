@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool from farm to fabric</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <div class="imgbtn">
+            <button id="checkbox" class="toogle" onclick="tooglemenu()"><img src="/wool-from-farm-to-fabric/images/images-removebg-preview.png" alt=""></button>
+        </div>
+    <div class="name">
+    <div id="logo" class="logo"><img src="/wool-from-farm-to-fabric/images/OIP_1-removebg-preview (2).png" alt="logo" height="70px"></div>
+    <div id="logo-text" class="logo-text"><h1><p>WOOLYMOO</p></h1></div>
+    </div>
+    <div id="login" class="login"><a href="sign.html" ><h2 class="loginbutton">Login/Signup</h2></a></div>
+</header>
+<div class="menu" id="menu" >
+   <ul>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="" class="active">Home</a></li>
+    <li><a href="">Orders</a></li>
+    <li><a href="">Cart</a></li>
+    <li><a href="">About us</a></li>
+    <li><a href="">Help</a></li>
+   </ul>
+</div>
+<div class="homepage-top">
+    
+</div>
+
+
+</body>
+<script>
+    function tooglemenu(){
+        const menu=document.getElementById("menu");
+        const currentleft=parseInt(getComputedStyle(menu).left);
+        if(currentleft===0){
+            menu.style.left='-180px';
+        }
+        else{
+            menu.style.left='0';
+        }
+    }
+</script>
+</html>
