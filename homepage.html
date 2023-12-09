@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wool from farm to fabric</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        justify-content: center;
+        background: #e3e9f7;
+    }
+ 
+    
+    .name{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        
+    }
+    .logo{
+        margin-left: 200px;
+        
+        
+    }
+    .logo-text{
+        margin-left: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #e3e9f7;
+        
+    }
+    .login{
+        margin-left: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+    .loginbutton{
+        color:#e3e9f7;
+        margin-right: 50px;
+        margin-top: 30px;
+        
+    }
+    
+    header{
+        width: 95%;
+        height: 70px;
+        background:#675cff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        border-radius: 10px;
+        margin: 0 auto;
+        
+        border-radius: 0 0 10px 10px;
+
+    }
+    .menu{
+        float: left;
+        background: #f1f1f1;
+        height: 900px;
+        width: 10%;
+        margin: 0;padding: 0;
+        position: fixed;
+        display: block;
+        left: -180px;
+        transition: 0.3s ease;
+        
+    }
+    .menu a{
+        display: block;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 7px;
+        color: #000;
+        text-decoration: none;
+
+    }
+    .menu a:hover:not(.active){
+        background-color: #555;
+        color: white;
+    }
+    .menu ul{
+        padding: 0;
+        margin: 0;
+    }    
+    .active{
+        background-color: #675cff;
+        color: white;
+    }
+    .active:hover{
+        background-color: white;
+        color: #675cff;
+    }
+    
+    .imgbtn button{
+        border: 0;
+       background-color: #675cff;
+        
+        cursor: pointer;
+        
+    }
+    .imgbtn img{
+        height: 50px;
+    }
+    
+   
+    
+   
+    
+ 
+</style>
+<body>
+   
+    <header>
+        <div class="imgbtn">
+            <button id="checkbox" class="toogle" onclick="tooglemenu()"><img src="images-removebg-preview.png" alt=""></button>
+        </div>
+   
+    <div class="name">
+    <div id="logo" class="logo"><img src="OIP__1_-removebg-preview (2).png" alt="logo" height="70px"></div>
+    <div id="logo-text" class="logo-text"><h1><p>WOOLYMOO</p></h1></div>
+    </div>
+    <div id="login" class="login"><a href="login.html" ><h2 class="loginbutton">Login</h2></a></div>
+</header>
+<div class="menu" id="menu" >
+   <ul>
+    <li><a href="">Profile</a></li>
+    <li><a href="" class="active">Home</a></li>
+    <li><a href="">Orders</a></li>
+    <li><a href="">Cart</a></li>
+    <li><a href="">About us</a></li>
+    <li><a href="">Help</a></li>
+   </ul>
+</div>
+
+
+</body>
+<script>
+    function tooglemenu(){
+        const menu=document.getElementById("menu");
+        const currentleft=parseInt(getComputedStyle(menu).left);
+        if(currentleft===0){
+            menu.style.left='-180px';
+        }
+        else{
+            menu.style.left='0';
+        }
+    }
+</script>
+</html>
