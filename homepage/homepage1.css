@@ -23,7 +23,14 @@ img {
     justify-content: center;
     align-items: center;
 }
-
+@media(max-width:640px){
+    .logo-div{
+        width: 19px;
+        height: 38px;
+        overflow: hidden;
+        padding-right: 8px;
+    }
+}
 .logo-div {
     display: flex;
     padding-left: 20px;
@@ -58,11 +65,20 @@ img {
     display: flex;
     flex: 1;
     height: 40px;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: 80px;
     border-radius: 20px;
     border: none;
+    margin-left: 10px;
 }
+@media(max-width:640px){
+    .search-bar{
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-left: 50px;
+    }
+}
+
 
 .search-icon {
     position: absolute;
@@ -73,8 +89,19 @@ img {
     width: 20px;
     height: 20px;
 }
+
+@media(max-width:640px){
+    .search-icon{
+        right: 8%
+    }
+}
 .space{
     width: 40px;
+}
+@media(max-width:640px){
+    .space{
+        width: 0px;
+    }
 }
 
 .profile-div {
@@ -83,6 +110,12 @@ img {
     padding-left: 20px;
     padding-right: 20px;
     height: 50px;
+}
+@media (max-width:640px) {
+    .profile-div{
+        width: 20px;
+        overflow: hidden;
+    }
 }
 .profile-div:hover{
     border: 1px solid white;
@@ -112,6 +145,17 @@ img {
     border-top: 0px;
     align-content: center;
 }
+
+@media (max-width: 900px) {
+    .navigation-div {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .navigation-div{
+        grid-template-columns: 0fr 1fr 1fr 1fr 1fr 1fr 0fr;
+    }
+  }
 
 .Home,
 .About-us,
