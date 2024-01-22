@@ -261,10 +261,26 @@
     <div class="orders-section">
         <h2>Your Orders</h2>
     </div>
+    <div class="order-container">
+        <div class="order-details">
+            <img class="product-image" src="productimages/tanya-trukyr-1UFTd1eRamE-unsplash.jpg" alt="Product Image">
+            <div class="product-info">
+                <span class="product-name"></span>
+                <div class="rating">★★★★☆</div>
+            </div>
+        </div>
+        <p class="order-date">Order Date: december 1, 2024</p>
+        <p class="price">Price: 69.00</p>
+        <div class="order-actions">
+            <button class="track-button">Track Order</button>
+            <button class="cancel-button">Cancel Order</button>
+        </div>
+    </div>
+    
 
     <script>
         const ordersData = [
-            { productName: 'raghupu', date: 'december 1, 2024', price: 69.00, rating: 4, image: 'productimages/tanya-trukyr-1UFTd1eRamE-unsplash.jpg' },
+            { productName: '', date: '', price: , rating: 4, image: '' },
             { productName: 'thanushsu', date: 'december 1, 2024', price: 69.00, rating: 5, image: 'productimages/tanya-trukyr-1UFTd1eRamE-unsplash.jpg' }
             // add++
         ];
@@ -277,19 +293,7 @@
                 orderContainer.classList.add('order-container');
 
                 orderContainer.innerHTML = `
-                    <div class="order-details">
-                        <img class="product-image" src="${order.image}" alt="Product Image">
-                        <div class="product-info">
-                            <span class="product-name">${order.productName}</span>
-                            <div class="rating">${'★'.repeat(order.rating)}${'☆'.repeat(5 - order.rating)}</div>
-                        </div>
-                    </div>
-                    <p class="order-date">Order Date: ${order.date}</p>
-                    <p class="price">Price: ${order.price.toFixed(2)}</p>
-                    <div class="order-actions">
-                        <button class="track-button">Track Order</button>
-                        <button class="cancel-button">Cancel Order</button>
-                    </div>
+                   
                 `;
 
                 ordersSection.appendChild(orderContainer);
