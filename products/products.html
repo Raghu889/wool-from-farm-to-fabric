@@ -230,6 +230,19 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .subtotal-div{
+            display: flex;
+            right: 0;
+            left: 0;
+            bottom: 0px;
+            position: fixed;
+            background-color: black;
+            
+        }
+        
+        .buy:hover{
+            opacity: 0.85;
+        }
     </style>
 </head>
 <body>
@@ -265,7 +278,7 @@
         <div class="order-details">
             <img class="product-image" src="productimages/tanya-trukyr-1UFTd1eRamE-unsplash.jpg" alt="Product Image">
             <div class="product-info">
-                <span class="product-name"></span>
+                <span class="product-name">pillow</span>
                 <div class="rating">★★★★☆</div>
             </div>
         </div>
@@ -276,7 +289,18 @@
             <button class="cancel-button">Cancel Order</button>
         </div>
     </div>
-    
+    <div class="subtotal-div">
+            <pre class="total" style="font-weight: bolder;font-size: x-large; margin: 0;padding-top: 30px;color: white;">
+                  Total amount:&#8377;150.            
+            </pre>
+            <pre style="display: flex;flex: 1;"> </pre>
+        <button class="buy" style="width: 200px;transition: 1ms;">
+            Buy now
+        </button>
+    </div>
+    <script>
+        let p=document.querySelector(".")
+    </script>
 
     <script>
         const ordersData = [
@@ -300,6 +324,33 @@
             });
         }
 
+
+        router.post("/cart/:productId",async(req,res)=>{
+    const user=req.session.user;
+    const quantity=parseInt(req.body.quantity);
+    if(user){
+    const productId =req.params.productId;
+    const product=await uploads.findById(productId);
+    product.quantity=quantity;
+    var i=0;
+    cart.push(product); 
+    while(i<=cart.length-1){
+        
+        if(cart[i].quantity==1){
+            cart.splice(i,1);
+            res.json({message:"Product added to cart"});
+            break;
+        }
+        i+=1;
+    }
+    
+}
+else{
+    res.render("login");
+}
+
+
+})
         generateOrders();
     </script>
 </body>
